@@ -1,14 +1,12 @@
-\name{bberdev}
-\alias{bberdev}
-\alias{nberdev}
+\name{berdev}
+\alias{berdev}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Some Properties of 28 benchmark densities}
 \description{
-Names and points of nonsmoothness for the 28 distributions from Berlinet/Devroye (1994).
+Name, position of modes, support and points of nonsmoothness for the 28 distributions from Berlinet/Devroye (1994).
 }
 \usage{
-bberdev(dnum = 1)
-nberdev(dnum = 1)
+berdev(dnum = 1)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -76,14 +74,19 @@ Section 3.2, which are:
  \code{dnum == 28}  "bilogarithmic peak"
 % }
 }
-\value{
-\item{nberdev}{gives the name of the distribution (the same as \code{name} in \code{berdev}).}
-\item{bberdev}{Since evaluation of loss functions 
+\value{\code{berdev} returns a list with components
+\item{name}{gives the name of the distribution, }
+\item{peaks}{ gives a vector of the positions of peaks or modes of the density, and}
+
+\item{support}{ gives a matrix as follows: in each row an interval is defined 
+(with the first column giving the left and the second column the right end of the interval).
+Together the intervals give the support of the distribution (for most distributions only one interval).}
+
+\item{breaks}{Since evaluation of loss functions 
 in nonparametric density estimation often requires numerical 
 integration, \code{bberdev}  returns a vector of points you should 
 generally take care not to integrate over, e.g. points where 
-the density is not continous or not differentiable
-(gives the same as \code{breaks} in \code{berdev}).} 
+the density is not continous or not differentiable.} 
 }
 
 
@@ -106,9 +109,11 @@ vol. 38(3), pp. 3-59, 1994.
 %- ##-- ==>  Define data, use random,
 %- ##--    or do  help(data=index)  for the standard data sets.
 
-# name of "Claw"-distribution
-nberdev(dnum=23)
+# position of peaks of "Claw"-distribution
+berdev(dnum=23)$peaks
 
+# support of the "Trimodal uniform"
+berdev(dnum=26)$support
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

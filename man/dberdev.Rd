@@ -1,18 +1,26 @@
-\name{bberdev}
-\alias{bberdev}
-\alias{nberdev}
+\name{dberdev}
+\alias{dberdev}
+\alias{pberdev}
+\alias{qberdev}
+\alias{rberdev}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Some Properties of 28 benchmark densities}
+\title{ 28 benchmark densities from Berlinet/Devroye (1994) }
 \description{
-Names and points of nonsmoothness for the 28 distributions from Berlinet/Devroye (1994).
+Density, distribution function, quantile function and random 
+generation for the 28 distributions from Berlinet/Devroye (1994).
 }
 \usage{
-bberdev(dnum = 1)
-nberdev(dnum = 1)
+dberdev(x,dnum = 1)
+pberdev(q,dnum = 1)
+qberdev(p,dnum = 1)
+rberdev(n,dnum = 1)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dnum}{ number of distribution as in Berlinet/Devroye (1994), Section 3.2. }
+  \item{x,q}{ vector of quantiles.  }
+  \item{p}{ vector of probabilities.  }
+  \item{n}{ number of observations.  }
 }
 
 \details{ These functions implement the 28 distributions from Berlinet and Devroye (1994), 
@@ -77,13 +85,10 @@ Section 3.2, which are:
 % }
 }
 \value{
-\item{nberdev}{gives the name of the distribution (the same as \code{name} in \code{berdev}).}
-\item{bberdev}{Since evaluation of loss functions 
-in nonparametric density estimation often requires numerical 
-integration, \code{bberdev}  returns a vector of points you should 
-generally take care not to integrate over, e.g. points where 
-the density is not continous or not differentiable
-(gives the same as \code{breaks} in \code{berdev}).} 
+\item{dberdev}{ gives the density, }
+\item{pberdev}{ gives the distribution function, }
+\item{qberdev}{ gives the quantile function, and }
+\item{rberdev}{ generates random deviates.}
 }
 
 
@@ -94,8 +99,8 @@ vol. 38(3), pp. 3-59, 1994.
 }
 \author{ Thoralf Mildenberger, Henrike Weinert and Sebastian Tiemeyer}
 
-%\section{Acknowledgement}{The authors thank Luc Devroye for providing his original implementation
-%for testing purposes.}
+\section{Acknowledgement}{The authors thank Luc Devroye for providing his original implementation
+for testing purposes.}
 %- \note{ ~~further notes~~ 
 %-
 %- ~Make other sections like Warning with \section{Warning }{....} ~
@@ -106,9 +111,19 @@ vol. 38(3), pp. 3-59, 1994.
 %- ##-- ==>  Define data, use random,
 %- ##--    or do  help(data=index)  for the standard data sets.
 
-# name of "Claw"-distribution
-nberdev(dnum=23)
+# histogram and true density of "Claw"-distribution
+hist(rberdev(1000,dnum=23),breaks=100, main = " ",freq=FALSE)
+lines(seq(-3,3,0.01),dberdev(seq(-3,3,0.01),dnum=23),col="blue",lwd=2)
+title(paste(nberdev(dnum=23)))
 
+# plot cdf of simulated data and the df of "Matterhorn"-distribution
+plot.stepfun(rberdev(100,dnum=14),do.points=TRUE,main="")
+lines(seq(-1,1,0.001),pberdev(seq(-1,1,0.001),dnum=14),col="blue")
+title(paste(nberdev(dnum=14)))
+
+# plot quantiles of "smooth comb"-distribution
+plot(qberdev(seq(0,1,0.01),dnum=24),t="l")
+title(paste(nberdev(dnum=24)))
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
