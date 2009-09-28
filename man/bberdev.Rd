@@ -2,7 +2,7 @@
 \alias{bberdev}
 \alias{nberdev}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Some Properties of 28 benchmark densities}
+\title{Some properties of 28 benchmark densities}
 \description{
 Names and points of nonsmoothness for the 28 distributions from Berlinet/Devroye (1994).
 }

@@ -6,7 +6,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ 28 benchmark densities from Berlinet/Devroye (1994) }
 \description{
-Density, distribution function, quantile function and random 
+Density, distribution function, quantile function and random variate  
 generation for the 28 distributions from Berlinet/Devroye (1994).
 }
 \usage{

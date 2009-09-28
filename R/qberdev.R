@@ -20,13 +20,8 @@ qen10 <- function(p)  {
 }       
 qen11 <- function(p) {qnorm(p,mean=0,sd=1)} 
 qen12<- function(p) {qlnorm(p,meanlog = 0, sdlog = 1)}
-qen13 <- function(p) { outvek<-(-5)*(p==0)+5*(p==1)
-  p2<-unique(p[(p>0)&(p<1)])            
-  for (h in p2) {
-    fkt<-function(z) (pberdev(z,dnum=13)-h) 
-        outvek[p==h]<-uniroot(f=fkt,interval=c(-5,5))$root 
-        }
-  outvek
+qen13 <- function(p) { (p>=0)*(p<=0.225)*(p*20-5)+(p>0.225)*(p<=0.775)*((p-0.225)/0.55-0.5)+
+	(p>0.775)*(p<=1)*((p-0.775)*20+0.5)
 }
 qen14 <- function(p)  { outvek <- rep(0,length(p))
   outvek[p!=0.5]<-(sign(p-0.5)*(exp(sign(p-0.5)/(0.5-p))))[p!=0.5]
@@ -187,6 +182,8 @@ qen28 <- function(p) { outvek<-(-1)*(p==0)+1*(p==1)
 `qberdev` <- function(p, dnum=1) {
         if (is.nan(dnum) || ! dnum %in% 1:28)
             stop("dnum must be between 1 and 28")
+        p[p>1]<-1
+        p[p<0]<-0
         return (
             eval(               
                 parse(text = sprintf("qen%02d(p)", dnum)) # evaluate "qen[dnum](p)"-string
