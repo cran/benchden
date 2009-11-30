@@ -56,8 +56,9 @@ where \eqn{U[a,b]} denotes the uniform distribution on \eqn{[a,b]}.
 }
 
 
-\references{ Y. Rozenholc, T. Mildenberger and U. Gather, "Constructing Irregular Histograms by Penalized Likelihood", Technical Report 04/2009, TU Dortmund.
-\url{http://www.statistik.tu-dortmund.de/fileadmin/user_upload/Lehrstuehle/MSind/SFB_475/2009/tr04-09.pdf}
+\references{ Y. Rozenholc, T. Mildenberger and U. Gather, "Combining Regular and Irregular Histograms by Penalized Likelihood", 
+Discussion Paper 31/2009, SFB 823, TU Dortmund.
+\url{http://www.statistik.tu-dortmund.de/fileadmin/user_upload/SFB_823/discussion_papers/2009/31_09_rozenholc_mildenberger_gather.pdf}
 }
 \author{ Thoralf Mildenberger}
 
