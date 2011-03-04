@@ -4,7 +4,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Some properties of 4 histogram benchmark densities}
 \description{
-Names and breakpoints for the 4 histogram benchmark distributions from Rozenholc/Mildenberger/Gather (2009).
+Names and breakpoints for the 4 histogram benchmark distributions from Rozenholc/Mildenberger/Gather (2010).
 }
 \usage{
 bhisto(dnum = 1)
@@ -16,7 +16,7 @@ nhisto(dnum = 1)
 }
 
 \details{ These functions implement the 4 histogram benchmark distributions 
-from Rozenholc/Mildenberger/Gather (2009). Defined as the following mixtures of uniform distributions:
+from Rozenholc/Mildenberger/Gather (2010). Defined as the following mixtures of uniform distributions:
 %\describe{
 
  \code{dnum == 1}   5 bin regular histogram:
@@ -46,9 +46,8 @@ where \eqn{U[a,b]} denotes the uniform distribution on \eqn{[a,b]}.
 }
 
 
-\references{ Y. Rozenholc, T. Mildenberger and U. Gather, "Combining Regular and Irregular Histograms by Penalized Likelihood", 
-Discussion Paper 31/2009, SFB 823, TU Dortmund.
-\url{http://www.statistik.tu-dortmund.de/fileadmin/user_upload/SFB_823/discussion_papers/2009/31_09_rozenholc_mildenberger_gather.pdf}
+\references{ Y. Rozenholc, T. Mildenberger and U. Gather (2010), "Combining Regular and Irregular Histograms by Penalized Likelihood", Computational Statistics and Data Analysis, 54, 3313-3323. 
+Earlier version including explicit definition of the densities: \url{http://www.statistik.tu-dortmund.de/fileadmin/user_upload/SFB_823/discussion_papers/2009/31_09_rozenholc_mildenberger_gather.pdf}
 }
 \author{ Thoralf Mildenberger}
 
