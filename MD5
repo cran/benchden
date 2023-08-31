@@ -1,5 +1,5 @@
-b7ab6b0b9fd3e2c46ad068a9576340e7 *DESCRIPTION
-70c2e97c96403a176c1f139cabd90caa *NAMESPACE
+5c678f2a494a9bed5f2c106c4b5d7138 *DESCRIPTION
+33ab7e147554d7162074a8cce6dae7fc *NAMESPACE
 f9200c3c7b5f0a8c6822b48aba1998f0 *R/bberdev.R
 0ab4b32b23b5cf228f2e747cd059ec30 *R/berdev.R
 4bae3c63e3391b89d8e48b7a7d62707b *R/dberdev.R
@@ -8,10 +8,11 @@ c5a71a776eb884d2328a16ac199702f7 *R/histo.R
 7f5288e699f4bc44a923623cc867fce4 *R/pberdev.R
 8bd587197540d90ec2c0c959962c86cb *R/qberdev.R
 9ff2f2aa76d4acc532620d3664bad18f *R/rberdev.R
-26c14c5b3b02c6c13707a4c393c0576e *inst/CITATION
-024808e2aaf864e3e8cb72878342a98a *man/bberdev.Rd
-efc54a57d1d0be13cd8251d1f4119cee *man/berdev.Rd
-4c84fc4f98e0f0482bb02b9c9e61c2fa *man/bhisto.Rd
-2e6d1613774f80942e457e7e2a6c1e00 *man/dberdev.Rd
-6d6f139d312e5bcdc44343920c6e9b01 *man/dhisto.Rd
-b02b52ab2a03d575808dbb5cf4c206cb *man/histo.Rd
+7080893e02c49cd296d4424b9be55069 *build/partial.rdb
+7542a8086cb1caa86fe63033fd4c4327 *inst/CITATION
+00a6990fcbac1a79502421483f22671b *man/bberdev.Rd
+970317a8feb3d1393ac211c65fff49ae *man/berdev.Rd
+7711051eb3290797c5db5ef25d205f98 *man/bhisto.Rd
+6a335a6a2f3768c03e998aeee0a0aa65 *man/dberdev.Rd
+39c280e9e088e70a7eb5b950f769e587 *man/dhisto.Rd
+f10c584dd027dfbcdedc905b8f980de0 *man/histo.Rd
